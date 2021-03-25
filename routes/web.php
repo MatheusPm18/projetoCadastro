@@ -18,3 +18,8 @@ Route::get('/', function () {
 });
 Route::get ('/cadastrar', '\App\Http\Controllers\CadastroController@cadastro')->name('carregarCadastro');
 Route::post ('/cadastro-carregar', '\App\Http\Controllers\CadastroController@formulario')->name('formulario');
+
+Route::get ('/menu', '\App\Http\Controllers\CadastroController@menu')->name('carregarMenu');
+Route::get ('/mostrarCadastro', '\App\Http\Controllers\CadastroController@mostrarCadastro')->name('cadastroCompleto');
+
+Route::get ('/listusuario', '\App\Http\Controllers\CadastroController@listUsuario')->name('carregarlistusuario');

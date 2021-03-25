@@ -40,12 +40,7 @@
                                     <input type="text" class="form-control" id="nomeImput" name="nome">
                                 </div>
                     </div>
-                    <div class="mb-3">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Endereço de email:</label>
-                                    <input type="email" class="form-control" id="emaiImput" name="email">
-                                </div>
-                    </div>
+                    
                     <div class="mb-3">  
                                     <label for="exampleFormControlInput1">Data de Nascimento:</label>
                                     <input type="date" class="form-control" id="dataImput" name="data"  >
@@ -60,7 +55,7 @@
                                     <input type="number" class="form-control" id="matriculaImput" name="matricula">
                     </div> 
 
-                    <button type="submit" class="btn btn-primary">Finalizar</button>
+                    <button  action="{{ route('cadastroCompleto') }}type="submit" class="btn btn-primary">Finalizar</button>
                     </form>
             </div>     
 
