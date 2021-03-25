@@ -1,18 +1,30 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\models\Usuario;
 class CadastroController extends Controller
 {
     public function formulario(Request $request)
-    {  
-        $nome = $request->nome; 
-        $data = $request->data; 
-        $senha = $request->senha;
-        $matricula = $request->matricula;
-
-        return view('mostrarCadastro', compact('nome', 'data', 'senha', 'matricula'));
+    { 
+        $usuario = new Usuario();
+        $usuario->nome= $request->nome;
+        $usuario->data_nascimento= $request->data_nascimento;
+        $usuario->senha= $request->senha;
+        $usuario->matricula= $request->matricula;
+        $usuario->save();
+        return view('usuario.show', compact('usuario'));
 
     }
+
+
+
+    public function listar()
+    {
+       $usuarios = usuario::all();
+       return view('usuario.lista');
+    }
+
+
     public function cadastro()
     {
         return view ('formCadastro');
@@ -28,6 +40,7 @@ class CadastroController extends Controller
     }
     public function listUsuario()
     {
-        return view ('listUsuario');
+        $usuarios = usuario::all();
+        return view('usuario.lista', compact ('usuarios'));
     }
 }
