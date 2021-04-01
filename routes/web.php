@@ -23,3 +23,7 @@ Route::get ('/menu', '\App\Http\Controllers\CadastroController@menu')->name('car
 Route::get ('/mostrarCadastro', '\App\Http\Controllers\CadastroController@mostrarCadastro')->name('cadastroCompleto');
 
 Route::get ('/listusuario', '\App\Http\Controllers\CadastroController@listUsuario')->name('carregarlistusuario');
+
+Route::get ('/usuario/editar/{id}', '\App\Http\Controllers\CadastroController@editarUsuario')->name('editarUsuario');
+Route::post ('salvar_edicao', '\App\Http\Controllers\CadastroController@salvarEdicao')->name('salvarEdicao');
+Route::get ('/usuario/excluir/{id}', '\App\Http\Controllers\CadastroController@excluirUsuario')->name('excluirUsuario');

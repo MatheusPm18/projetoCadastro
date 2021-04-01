@@ -43,4 +43,23 @@ class CadastroController extends Controller
         $usuarios = usuario::all();
         return view('usuario.lista', compact ('usuarios'));
     }
+
+    public function editarUsuario($id){
+        $usuario = Usuario::where('id', $id)->first();
+        return view('usuario.edit', compact('usuario'));
+    }
+    public function salvarEdicao(Request $request){
+        $usuario = Usuario::where('id', $request->id)->first();
+        $usuario->nome= $request->nome;
+        $usuario->data_nascimento= $request->data_nascimento;
+        $usuario->senha= $request->senha;
+        $usuario->matricula= $request->matricula;
+        $usuario->update();
+        return redirect (route ('carregarlistusuario'));
+    }
+
+    public function excluirUsuario($id){
+       Usuario::destroy($id);
+       return redirect (route ('carregarlistusuario'));
+    }
 }

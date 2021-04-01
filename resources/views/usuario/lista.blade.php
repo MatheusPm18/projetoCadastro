@@ -14,6 +14,7 @@
             <th scope="col">Data de Nascimento</th>
             <th scope="col">Senha</th>
             <th scope="col">Matricula</th>
+            <th scope="col">Ações</th>
           </tr> 
         </thead>
         <tbody>
@@ -25,6 +26,12 @@
             <td scope ="row">{{$item->data_nascimento}}</td>
             <td scope ="row">{{$item->senha}}</td>
             <td scope ="row">{{$item->matricula}}</td>
+            <td scope ="row">
+              <a href ="{{route('editarUsuario', $item->id)}}">Editar</a>
+              <a href ="{{route('excluirUsuario', $item->id)}}">Excluir</a>
+              
+            </td>
+            
 
           </tr>
           @endforeach
