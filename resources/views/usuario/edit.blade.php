@@ -37,7 +37,7 @@
                     <input type="hidden" name = 'id' value="{{$usuario->id}}">
                     <div class="mb-3">
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Nome Completo:</label>
+                                    <label for="exampleFormControlInput1">Nome Completo: </label>
                                     <input type="text" class="form-control" id="nomeImput" name="nome" value="{{$usuario->nome}}">
                                 </div>
                     </div>

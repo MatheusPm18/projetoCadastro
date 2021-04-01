@@ -23,6 +23,12 @@
         <div class="row mt-3">
                 <a href="{{ route('carregarlistusuario') }}"  class="btn btn-primary">Lista de Usuarios</a>
         </div>  
+        <div class="row mt-3">
+                <a href="{{ route('carregarEndereco') }}"  class="btn btn-primary">Cadastrar Endereços</a>
+        </div>  
+        <div class="row mt-3">
+                <a href="{{ route('carregarlistEndereco') }}"  class="btn btn-primary">Lista de Endereços</a>
+        </div>  
 
         
             
