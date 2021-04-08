@@ -37,3 +37,7 @@ Route::get ('/listEndereco', '\App\Http\Controllers\CadastroController@listEnder
 Route::get ('/endereco/excluir/{id}', '\App\Http\Controllers\CadastroController@excluirEndereco')->name('excluirEndereco');
 Route::get ('/endereco/editar/{id}', '\App\Http\Controllers\CadastroController@editarEndereco')->name('editarEndereco');
 Route::post ('salvar_endereco', '\App\Http\Controllers\CadastroController@salvarEndereco')->name('salvarEndereco');
+
+
+Route::get ('/createUsuarioEndereco', '\App\Http\Controllers\NovoController@create')->name('createUsuarioEndereco');
+Route::post ('/saveUsuarioEndereco', '\App\Http\Controllers\NovoController@save')->name('saveUsuarioEndereco');

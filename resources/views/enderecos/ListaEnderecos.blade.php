@@ -5,7 +5,7 @@
 <meta charset="UTF-8"/>
 <title>Usuarios Cadastrados</title>
 </head>
-<body>
+  <body>
     <center><table class="table">
         <thead>
           <tr> 
@@ -15,12 +15,13 @@
             <th scope="col">Complemento: </th>
             <th scope="col">bairro: </th>
             <th scope="col">Numero: </th>
+            <th scope="col">Proprietario: </th>
             <th scope="col">Ações: </th>
+            
           </tr> 
         </thead>
         <tbody>
               @foreach ($enderecos as $item)
-                  
              <tr> 
             <td scope ="row">{{$item->cep}}</td>
             <td scope ="row">{{$item->estado}}</td>
@@ -28,6 +29,7 @@
             <td scope ="row">{{$item->complemento}}</td>
             <td scope ="row">{{$item->bairro}}</td>
             <td scope ="row">{{$item->numero}}</td>
+            <td scope ="row">{{$item->usuario->nome}}</td>
             <td scope ="row">
                 <a href ="{{route('editarEndereco', $item->id)}}">Editar</a>
                 <a href ="{{route('excluirEndereco', $item->id)}}">Excluir</a>
@@ -41,5 +43,5 @@
         </tbody>
       </table>
     
-</body>
-</html>
+  </body>
+  </html>

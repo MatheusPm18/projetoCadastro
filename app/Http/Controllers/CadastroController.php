@@ -84,7 +84,7 @@ class CadastroController extends Controller
     }
     public function listEndereco()
     {
-        $enderecos = Endereco::all();
+        $enderecos = Endereco::get();
         return view('enderecos.ListaEnderecos', compact ('enderecos'));
     }
     public function excluirEndereco($id){

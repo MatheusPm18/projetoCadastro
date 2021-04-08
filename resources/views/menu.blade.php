@@ -28,7 +28,10 @@
         </div>  
         <div class="row mt-3">
                 <a href="{{ route('carregarlistEndereco') }}"  class="btn btn-primary">Lista de Endereços</a>
-        </div>  
+        </div> 
+        <div class="row mt-3">
+                <a href="{{ route('createUsuarioEndereco') }}"  class="btn btn-primary">Usuario com Endereço</a>
+        </div>   
 
         
             
